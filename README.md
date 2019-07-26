@@ -36,8 +36,9 @@ Add modules configuration:
 return [
     'modules'             => [
         'logtest'   => [
-            'class'  => 'kuainiu\accesslog\Module',
-            'includeIndex'=>true
+            'class'  => 'neek\acclog\Module',
+            #capital为false report为true
+            'includeIndex'=>false
         ],
         ],
 ];
@@ -46,5 +47,6 @@ return [
 You can then access admin-extension manager through the following URL:
 
 ```
-http://localhost/kuainiu/accesslog
+http://localhost/logtest/myaccesslog/stat
 ```
+
