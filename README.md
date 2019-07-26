@@ -37,7 +37,6 @@ return [
     'modules'             => [
         'logtest'   => [
             'class'  => 'kuainiu\accesslog\Module',
-            //判断 true为report系统，false为capital系统
             'includeIndex'=>true
         ],
         ],
