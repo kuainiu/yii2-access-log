@@ -1,5 +1,5 @@
 {
-    "name": "kuainiu/accesslog",
+    "name": "kuainiu/yii2-access-log",
     "description": "访问统计组件",
     "type": "yii2-extension",
     "minimum-stability": "dev",
