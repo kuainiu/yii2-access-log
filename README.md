@@ -1,1 +1,1 @@
-# yii2-access-log
+# yii2-accesslog
