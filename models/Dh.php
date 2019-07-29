@@ -1,6 +1,6 @@
 <?php
 
-namespace kuainiu\access_log\models;
+namespace kuainiu\accesslog\models;
 
 use DateInterval;
 use DateTime;

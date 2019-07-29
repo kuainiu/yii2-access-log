@@ -1,6 +1,6 @@
 <?php
 
-namespace kuainiu\access_log;
+namespace kuainiu\accesslog;
 
 
 use Yii;

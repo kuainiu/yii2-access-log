@@ -1,6 +1,6 @@
 <?php
-namespace kuainiu\access_log\components;
-use kuainiu\access_log\models\LogHelper;
+namespace kuainiu\accesslog\components;
+use kuainiu\accesslog\models\LogHelper;
 
 class BeforeAction
 {
