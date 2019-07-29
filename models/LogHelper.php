@@ -1,9 +1,9 @@
 <?php
 
-namespace kuainiu\access_log\models;
+namespace kuainiu\accesslog\models;
 
-use kuainiu\access_log\models\AccessLog;
-use kuainiu\access_log\models\Dh;
+use kuainiu\accesslog\models\AccessLog;
+use kuainiu\accesslog\models\Dh;
 use Exception;
 use Yii;
 

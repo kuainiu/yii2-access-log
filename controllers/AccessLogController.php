@@ -1,9 +1,9 @@
 <?php
 
-namespace kuainiu\access_log\controllers;
+namespace kuainiu\accesslog\controllers;
 
-use kuainiu\access_log\models\AccessLog;
-use kuainiu\access_log\models\AccessLogSearch;
+use kuainiu\accesslog\models\AccessLog;
+use kuainiu\accesslog\models\AccessLogSearch;
 use yii\web\NotFoundHttpException;
 
 use Yii;
