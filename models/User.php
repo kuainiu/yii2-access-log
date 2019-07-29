@@ -187,4 +187,15 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    public static function setDefaultAvatar($record)
+    {
+        $compareString = 'https://p.qlogo.cn/bizmail/';
+        if (substr($record['avatar'], 0, 27) != $compareString) {
+            return 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?fit=crop&w=500&q=80';
+        }
+
+        return $record['avatar'];
+
+    }
 }

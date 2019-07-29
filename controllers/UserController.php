@@ -42,6 +42,7 @@ class UserController extends Controller
     protected function findModel($id)
     {
         if (($model = User::findOne($id)) !== null) {
+            $model['avatar'] = User::setDefaultAvatar($model);
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

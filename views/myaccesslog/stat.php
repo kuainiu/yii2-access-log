@@ -21,7 +21,7 @@ AppAsset::register($this);
                     <?php $profileUrl = sprintf("/%s/user/profile?id=%s",$this->context->module->id, $model['access_log_user_id']); ?>
                     <li style="width:70px;height: 110px">
                         <a class="users-list-name" href="<?= $profileUrl ?>">
-                            <img src="<?= $model['avatar'] ?>">
+                            <img style="width:50px;height: 50px" src="<?= $model['avatar'] ?>">
                             <div class="users-list-name "><?= $model['access_log_user_name'] ?></div>
                         </a>
                         <span class="users-list-count "><?= $model['count'] ?></span>

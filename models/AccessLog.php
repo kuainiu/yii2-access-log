@@ -112,7 +112,7 @@ class AccessLog extends \yii\db\ActiveRecord
     {
         //判断 true为report系统，false为capital系统
         if ($includeIndex==true) {
-            return self::find()
+            $records= self::find()
                 ->select([
                     //'access_log_id',
                     'access_log_user_id',
@@ -132,7 +132,7 @@ class AccessLog extends \yii\db\ActiveRecord
                 ->all();
         }
         else{
-            return self::find()
+            $records= self::find()
                 ->select([
                     'access_log_user_id',
                     'access_log_user_name',
@@ -147,7 +147,11 @@ class AccessLog extends \yii\db\ActiveRecord
                 ->asArray()
                 ->all();
 
-       }
+        }
+        for($i=0;$i<count($records);$i++){
+            $records[$i]['avatar']=User::setDefaultAvatar( $records[$i]);
+        }
+        return $records;
     }
 
     /**
