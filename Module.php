@@ -14,13 +14,5 @@ class Module extends \yii\base\Module
     {
         parent::init();
     }
-    public function beforeAction($action)
-    {
-        if (BeforeAction::execute()){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+
 }
