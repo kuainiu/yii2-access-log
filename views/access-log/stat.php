@@ -1,8 +1,11 @@
 <?php
 
 /* @var $this yii\web\View */
+
 /* @var $recentlyRecords array */
-use neek\acclog\assets\AppAsset;
+
+use kuainiu\access_log\assets\AppAsset;
+
 $this->title                   = '访问统计';
 $this->params['breadcrumbs'][] = $this->title;
 AppAsset::register($this);
@@ -18,7 +21,8 @@ AppAsset::register($this);
         <div class="box-body no-padding">
             <ul class="users-list">
                 <?php foreach ($recentlyRecords as $model): ?>
-                    <?php $profileUrl = sprintf("/%s/user/profile?id=%s",$this->context->module->id, $model['access_log_user_id']); ?>
+                    <?php $profileUrl = sprintf("/%s/user/profile?id=%s", $this->context->module->id,
+                        $model['access_log_user_id']); ?>
                     <li style="width:70px;height: 110px">
                         <a class="users-list-name" href="<?= $profileUrl ?>">
                             <img style="width:50px;height: 50px" src="<?= $model['avatar'] ?>">

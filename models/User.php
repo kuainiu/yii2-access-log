@@ -1,6 +1,6 @@
 <?php
 
-namespace neek\acclog\models;
+namespace kuainiu\access_log\models;
 
 use Yii;
 use yii\base\NotSupportedException;

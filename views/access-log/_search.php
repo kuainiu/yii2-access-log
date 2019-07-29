@@ -1,8 +1,9 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use neek\acclog\assets\SearchAsset;
-use neek\acclog\models\Dh;
+use kuainiu\access_log\assets\SearchAsset;
+use kuainiu\access_log\models\Dh;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\AccessLogSearch */
