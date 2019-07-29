@@ -20,7 +20,7 @@ AppAsset::register($this);
             <!-- Profile Image -->
             <div class="box box-primary">
                 <div class="box-body box-profile">
-                    <img class="profile-user-img img-responsive img-circle" src="<?= $model->avatar ?>">
+                    <img style="width:100px;height: 100px" class="profile-user-img img-responsive img-circle" src="<?= $model->avatar ?>">
                     <h3 class="profile-username text-center"><?= $model->fullname ?></h3>
                     <p class="text-muted text-center"><?= $model->position ?></p>
                     <p class="text-muted text-center"><?= $model->email ?></p>
