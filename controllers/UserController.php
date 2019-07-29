@@ -1,9 +1,9 @@
 <?php
 
-namespace neek\acclog\controllers;
+namespace kuainiu\access_log\controllers;
 
-use neek\acclog\models\AccessLog;
-use neek\acclog\models\User;
+use kuainiu\access_log\models\AccessLog;
+use kuainiu\access_log\models\User;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 

@@ -1,6 +1,6 @@
 <?php
-namespace neek\acclog\components;
-use neek\acclog\models\LogHelper;
+namespace kuainiu\access_log\components;
+use kuainiu\access_log\models\LogHelper;
 
 class BeforeAction
 {

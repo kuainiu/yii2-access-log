@@ -1,8 +1,7 @@
 <?php
 
-namespace neek\acclog;
+namespace kuainiu\access_log;
 
-use neek\acclog\components\BeforeAction;
 
 use Yii;
 

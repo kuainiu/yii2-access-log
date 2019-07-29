@@ -1,7 +1,8 @@
 <?php
 
-use neek\acclog\assets\CalHeatmapAsset;
-use neek\acclog\assets\AppAsset;
+use kuainiu\access_log\assets\CalHeatmapAsset;
+use kuainiu\access_log\assets\AppAsset;
+
 /* @var $this yii\web\View */
 /* @var $model \common\models\User */
 /* @var $accessCount array */
@@ -20,7 +21,8 @@ AppAsset::register($this);
             <!-- Profile Image -->
             <div class="box box-primary">
                 <div class="box-body box-profile">
-                    <img style="width:100px;height: 100px" class="profile-user-img img-responsive img-circle" src="<?= $model->avatar ?>">
+                    <img style="width:100px;height: 100px" class="profile-user-img img-responsive img-circle"
+                         src="<?= $model->avatar ?>">
                     <h3 class="profile-username text-center"><?= $model->fullname ?></h3>
                     <p class="text-muted text-center"><?= $model->position ?></p>
                     <p class="text-muted text-center"><?= $model->email ?></p>
@@ -46,18 +48,17 @@ AppAsset::register($this);
                                     <li class="item">
                                         <div class="product-info">
                                             <?php
-                                                if($this->context->module->includeIndex==true){
-                                                    $paramsUrl=$value['full_url'];
-                                                    $paramsName=$value['report_group'] . '-' . $value['report_name'];
-                                                }
-                                                else{
-                                                    $paramsName=$value['access_log_request_url'];
-                                                    $paramsUrl=$value['access_log_request_url'];
-                                                }
+                                            if ($this->context->module->includeIndex == true) {
+                                                $paramsUrl  = $value['full_url'];
+                                                $paramsName = $value['report_group'] . '-' . $value['report_name'];
+                                            } else {
+                                                $paramsName = $value['access_log_request_url'];
+                                                $paramsUrl  = $value['access_log_request_url'];
+                                            }
 
                                             ?>
                                             <a href="/<?= $paramsUrl ?>" class="product-title">
-                                                 <?=  $paramsName ?>
+                                                <?= $paramsName ?>
                                                 <span class="label label-warning pull-right"><?= $value['count'] ?></span></a>
                                         </div>
                                     </li>
@@ -66,8 +67,8 @@ AppAsset::register($this);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer text-center">
-                            <?php $indexUrl= sprintf('/%s/myaccesslog/index',$this->context->module->id) ?>
-                            <a href=<?= $indexUrl?> class="uppercase" target="_blank">查看所有访问记录</a>
+                            <?php $indexUrl = sprintf('/%s/access-log/index', $this->context->module->id) ?>
+                            <a href=<?= $indexUrl ?> class="uppercase" target="_blank">查看所有访问记录</a>
                         </div>
                         <!-- /.box-footer -->
                     </div>
@@ -96,13 +97,13 @@ AppAsset::register($this);
 
         var formatter = d3.time.format("%Y-%m-%d");
 
-        var now = moment().endOf('day').toDate();
-        var yearAgo = moment().startOf('day').subtract(1, 'year').toDate();
+        var now       = moment().endOf('day').toDate();
+        var yearAgo   = moment().startOf('day').subtract(1, 'year').toDate();
         var chartData = d3.time.days(yearAgo, now).map(function (dateElement) {
             var formatDate = formatter(dateElement);
 
             return {
-                date: dateElement,
+                date : dateElement,
                 count: accessCount[formatDate] ? parseInt(accessCount[formatDate]) : 0
             };
         });

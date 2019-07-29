@@ -1,8 +1,8 @@
 <?php
 
-namespace neek\acclog\models;
+namespace kuainiu\access_log\models;
 
-use neek\acclog\models\Dh;
+use kuainiu\access_log\models\Dh;
 use yii\base\UserException;
 use yii\data\ActiveDataProvider;
 use yii\helpers\Json;
