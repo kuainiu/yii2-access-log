@@ -16,17 +16,19 @@ class UserController extends Controller
     /**
      *
      * @param $id
+     *
      * @return mixed
      * @throws NotFoundHttpException
      */
     public function actionProfile($id)
     {
-        $includeIndex=$this->module->includeIndex;
-        return $this->render('profile', array(
+        $includeIndex = $this->module->includeIndex;
+
+        return $this->render('profile', [
             'model'          => $this->findModel($id),
-            'accessCount'    => AccessLog::getAccessCountByUserId($id,$includeIndex),
-            'accessUrlCount' => AccessLog::getAccessUrlCountByUserId($id,$includeIndex),
-        ));
+            'accessCount'    => AccessLog::getAccessCountByUserId($id, $includeIndex),
+            'accessUrlCount' => AccessLog::getAccessUrlCountByUserId($id, $includeIndex),
+        ]);
     }
 
 
@@ -43,6 +45,7 @@ class UserController extends Controller
     {
         if (($model = User::findOne($id)) !== null) {
             $model['avatar'] = User::setDefaultAvatar($model);
+
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

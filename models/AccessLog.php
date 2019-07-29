@@ -102,17 +102,17 @@ class AccessLog extends \yii\db\ActiveRecord
     /**
      * 获取最近访问记录
      *
-     * @param $includeIndex
+     * @param     $includeIndex
      * @param int $recentDays
      * @param int $limit
      *
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function getRecentlyRecords($includeIndex, $recentDays = 30,$limit = 80)
+    public function getRecentlyRecords($includeIndex, $recentDays = 30, $limit = 80)
     {
         //判断 true为report系统，false为capital系统
-        if ($includeIndex==true) {
-            $records= self::find()
+        if ($includeIndex == true) {
+            $records = self::find()
                 ->select([
                     //'access_log_id',
                     'access_log_user_id',
@@ -130,9 +130,8 @@ class AccessLog extends \yii\db\ActiveRecord
                 ->limit($limit)
                 ->asArray()
                 ->all();
-        }
-        else{
-            $records= self::find()
+        } else {
+            $records = self::find()
                 ->select([
                     'access_log_user_id',
                     'access_log_user_name',
@@ -148,9 +147,10 @@ class AccessLog extends \yii\db\ActiveRecord
                 ->all();
 
         }
-        for($i=0;$i<count($records);$i++){
-            $records[$i]['avatar']=User::setDefaultAvatar( $records[$i]);
+        for ($i = 0; $i < count($records); $i++) {
+            $records[$i]['avatar'] = User::setDefaultAvatar($records[$i]);
         }
+
         return $records;
     }
 
@@ -160,11 +160,12 @@ class AccessLog extends \yii\db\ActiveRecord
      * @param $userId
      *
      * @param $includeIndex
+     *
      * @return array
      */
     public static function getAccessCountByUserId($userId, $includeIndex)
     {
-        if ($includeIndex==true){
+        if ($includeIndex == true) {
             $data = self::find()
                 ->where(['access_log_user_id' => $userId])
                 //->andWhere(['not like', 'access_log_request_url', '.'])
@@ -174,8 +175,7 @@ class AccessLog extends \yii\db\ActiveRecord
                 ->select(['count' => 'count(*)', 'access_at' => 'date(access_log_access_at)'])
                 ->asArray()
                 ->all();
-        }
-        else{
+        } else {
             $data = self::find()
                 ->where(['access_log_user_id' => $userId])
                 ->groupBy('date(access_log_access_at)')
@@ -190,14 +190,14 @@ class AccessLog extends \yii\db\ActiveRecord
 
     /**
      * @param     $userId
-     * @param $includeIndex
+     * @param     $includeIndex
      * @param int $limit
      *
      * @return array|\common\models\AccessLog[]|\yii\db\ActiveRecord[]
      */
-    public static function getAccessUrlCountByUserId($userId, $includeIndex ,$limit = 40)
+    public static function getAccessUrlCountByUserId($userId, $includeIndex, $limit = 40)
     {
-        if ($includeIndex==true){
+        if ($includeIndex == true) {
             return self::find()
                 ->leftJoin('report', 'access_log_request_params like concat("%", report_id,"%")')
                 ->where(['access_log_user_id' => $userId])
@@ -215,11 +215,10 @@ class AccessLog extends \yii\db\ActiveRecord
                 ->asArray()
                 ->limit($limit)
                 ->all();
-        }
-        else{
+        } else {
             return self::find()
                 ->select([
-                    'count'    => 'count(*)',
+                    'count' => 'count(*)',
                     'access_log_request_url',
                 ])
                 ->where(['access_log_user_id' => $userId])

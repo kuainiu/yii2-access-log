@@ -40,6 +40,7 @@ class MyaccesslogController extends \yii\web\Controller
     public function actionStat()
     {
         $searchModel = new AccessLog();
+
         //$searchModel->getRecentlyRecords();
         return $this->render('stat', [
             'recentlyRecords' => $searchModel->getRecentlyRecords($this->module->includeIndex),
