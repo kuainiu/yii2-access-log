@@ -1,6 +1,6 @@
 <?php
 
-namespace neek\acclog\assets;
+namespace kuainiu\accesslog\assets;
 
 use yii\web\AssetBundle;
 
@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class CalHeatmapAsset extends AssetBundle
 {
-    public $sourcePath='@neek/acclog/assets';
+    public $sourcePath='@kuainiu/accesslog/assets';
     public $css      = [
         'js/cal-heatmap/calendar-heatmap.css',
     ];

@@ -1,11 +1,11 @@
 <?php
-namespace neek\acclog\assets;
+namespace kuainiu\accesslog\assets;
 
 use yii\web\AssetBundle;
 
 class SearchAsset extends AssetBundle
 {
-    public $sourcePath='@neek/acclog/assets';
+    public $sourcePath='@kuainiu/accesslog/assets';
     public $css     = [
         'css/common-search.css',
     ];
@@ -13,6 +13,6 @@ class SearchAsset extends AssetBundle
         'js/common-search.js',
     ];
     public $depends = [
-        'neek\acclog\assets\DatetimePickerAsset',
+        'kuainiu\accesslog\assets\DatetimePickerAsset',
     ];
 }

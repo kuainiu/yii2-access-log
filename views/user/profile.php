@@ -1,7 +1,7 @@
 <?php
 
-use kuainiu\access_log\assets\CalHeatmapAsset;
-use kuainiu\access_log\assets\AppAsset;
+use kuainiu\accesslog\assets\CalHeatmapAsset;
+use kuainiu\accesslog\assets\AppAsset;
 
 /* @var $this yii\web\View */
 /* @var $model \common\models\User */

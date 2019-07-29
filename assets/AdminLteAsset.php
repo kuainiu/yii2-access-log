@@ -1,5 +1,5 @@
 <?php
-namespace neek\acclog\assets;
+namespace kuainiu\accesslog\assets;
 
 use yii\base\Exception;
 use yii\web\AssetBundle as BaseAdminLteAsset;
@@ -10,7 +10,7 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
  */
 class AdminLteAsset extends BaseAdminLteAsset
 {
-    public $sourcePath = '@neek/acclog/assets/dist';
+    public $sourcePath = '@kuainiu/accesslog/assets/dist';
     public $css = [
         'css/AdminLTE.min.css',
     ];

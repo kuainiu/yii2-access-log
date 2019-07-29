@@ -1,11 +1,11 @@
 <?php
-namespace neek\acclog\assets;
+namespace kuainiu\accesslog\assets;
 
 use yii\web\AssetBundle;
 
 class DatetimePickerAsset extends AssetBundle
 {
-    public $sourcePath='@neek/acclog/assets';
+    public $sourcePath='@kuainiu/accesslog/assets';
     public $css     = [
         'js/datepicker/css/bootstrap-datetimepicker.min.css',
     ];
@@ -14,6 +14,6 @@ class DatetimePickerAsset extends AssetBundle
         'js/datepicker/js/locales/bootstrap-datetimepicker.zh-CN.js',
     ];
     public $depends = [
-        'neek\acclog\assets\AdminLteAsset',
+        'kuainiu\accesslog\assets\AdminLteAsset',
     ];
 }
