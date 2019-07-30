@@ -1,6 +1,6 @@
 <?php
 
-namespace neek\acclog\assets;
+namespace kuainiu\accesslog\assets;
 
 use yii\web\AssetBundle;
 use yii\web\View;
@@ -11,7 +11,7 @@ use yii\web\View;
 class AppAsset extends AssetBundle
 {
 
-    public $basePath = '@neek/acclog/assets';
+    public $basePath = '@kuainiu/accesslog/assets';
 
     //public $baseUrl = 'bootstrap';
 
@@ -26,7 +26,7 @@ class AppAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
-        'neek\acclog\assets\AdminLteAsset'
+        'kuainiu\accesslog\assets\AdminLteAsset'
     ];
 
     /**

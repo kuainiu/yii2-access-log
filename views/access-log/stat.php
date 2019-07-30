@@ -4,7 +4,7 @@
 
 /* @var $recentlyRecords array */
 
-use kuainiu\access_log\assets\AppAsset;
+use kuainiu\accesslog\assets\AppAsset;
 
 $this->title                   = '访问统计';
 $this->params['breadcrumbs'][] = $this->title;

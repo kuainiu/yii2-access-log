@@ -2,8 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kuainiu\access_log\assets\SearchAsset;
-use kuainiu\access_log\models\Dh;
+use kuainiu\accesslog\assets\SearchAsset;
+use kuainiu\accesslog\models\Dh;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\AccessLogSearch */
