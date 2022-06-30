@@ -15,18 +15,14 @@ class AppAsset extends AssetBundle
 
     //public $baseUrl = 'bootstrap';
 
-    public $css = [
-        'bootstrap/css/bootstrap.css',
-    ];
+    public $css = [];
 
-    public $js = [
-        'bootstrap/js/bootstrap.js'
-    ];
+    public $js = [];
 
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
-        'kuainiu\accesslog\assets\AdminLteAsset'
+        //'kuainiu\accesslog\assets\AdminLteAsset'
     ];
 
     /**
